@@ -3522,6 +3522,11 @@ for header in 'prompts[2|]{uid,tag}:' 'prompts[two]:' 'prompts{uid,tag}:'; do
   assert_contains "$out" "complete: no" "an unrecognized content header was certified complete: $header"
   assert_contains "$out" "malformed_items: 1" "an unrecognized content header was not reported: $header"
 done
+printf 'session:\n  file: /review.html\n  status: feedback\nprompts: []\n' > "$READ"
+out=$(read_out) || fail "read failed on an empty prompt array"
+assert_contains "$out" "complete: yes" "an empty prompt array was reported incomplete"
+assert_contains "$out" "declared_items: 0" "an empty prompt array invented a declared count"
+assert_contains "$out" "malformed_items: 0" "an empty prompt array was reported malformed"
 pass "read never certifies an unreadable list item or content header as complete"
 
 # The runner's silence seam is generic and closed by default: an adapter with no

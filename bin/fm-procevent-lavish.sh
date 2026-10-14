@@ -588,6 +588,7 @@ cmd_silent() {
 #       prompt: "..."               carries an extra or nested field, such as a
 #       target:                     text-selection `target` or image
 #         type: text-range          `attachments` (verified on lavish-axi 0.1.87).
+#   prompts: []                     EMPTY - how TOON writes an empty array.
 #
 # A value is either a quoted string with JSON-style escapes or a raw unquoted
 # token; TOON quotes every string holding a colon, quote, delimiter, or control
@@ -657,6 +658,8 @@ sub lavish_prompt_block {
         ($form, $block{want}, @fields) = ("tabular", $1, split /,/, $2);
       } elsif ($line =~ /^(?:$names)\[(\d+)\]:\s*$/) {
         ($form, $block{want}) = ("list", $1);
+      } elsif ($line =~ /^(?:$names): \[\]\s*$/) {
+        ($form, $block{want}) = ("list", 0);
       } elsif ($line =~ /^(?:$names)(?:$|[\[\{:\s])/) {
         $block{unrecognized}++;
       }
