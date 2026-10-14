@@ -1,0 +1,10 @@
+session:
+  file: /private/var/folders/0q/6b8bjvyj67313n440h06lx6w0000gn/T/lavish-lab.JWEC9m/tab.html
+  status: feedback
+  session_ended: true
+  ended_by: user
+prompts[2]{uid,prompt,selector,tag,text}:
+  "1","Captain's Call answer - X: beta\n\nContext data:\n{\"schema\":\"fm-bearings-answer.v1\",\"question\":\"decide.tab\",\"selection\":\"beta\",\"note\":\"\"}",div#q > form,choice,X -> beta
+  "","hi, there","",message,Freeform
+next_step: This was the last feedback before the user ended the session. Stop polling /private/var/folders/0q/6b8bjvyj67313n440h06lx6w0000gn/T/lavish-lab.JWEC9m/tab.html and do not reopen it - deliver any remaining updates directly in this conversation instead. Only run `lavish-axi /private/var/folders/0q/6b8bjvyj67313n440h06lx6w0000gn/T/lavish-lab.JWEC9m/tab.html --reopen` if the user explicitly asks for further review or something genuinely important needs their visual attention.
+dom_snapshot: ""

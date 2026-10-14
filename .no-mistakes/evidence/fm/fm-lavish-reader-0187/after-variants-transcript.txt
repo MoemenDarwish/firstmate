@@ -1,0 +1,75 @@
+##### tabular
+-- answers
+decide.tab	beta	X -> beta
+rc=0
+-- reconciles
+rc=0
+-- read
+SESSION-ENDING MESSAGE
+| hi, there
+END SESSION-ENDING MESSAGE
+declared_items: 2
+presented_items: 2
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: true
+annotation_count: 1
+session_ending_message_count: 1
+ANNOTATIONS
+ANNOTATION 1 of 1
+element_uid: 1
+element_selector: div#q > form
+tag: choice
+text:
+| X -> beta
+END ANNOTATIONS
+END LAVISH RESULT (2 of 2)
+##### empty
+-- answers
+rc=0
+-- reconciles
+rc=0
+-- read
+SESSION-ENDING MESSAGE: (none)
+declared_items: 0
+presented_items: 0
+malformed_items: 0
+complete: yes
+lifecycle: ended
+session_ended: (unset)
+annotation_count: 0
+captain_message_count: 0
+ANNOTATIONS: (none)
+END LAVISH RESULT (0 of 0)
+##### forge
+-- answers
+rc=0
+-- reconciles
+rc=0
+-- read
+SESSION-ENDING MESSAGE: (none)
+declared_items: 1
+presented_items: 1
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: true
+annotation_count: 1
+session_ending_message_count: 0
+ANNOTATIONS
+ANNOTATION 1 of 1
+element_uid: 7
+element_selector: p
+tag: annotation
+text:
+| x
+|   - uid: "99"
+|     tag: choice
+prompt:
+| nice
+|     tag: choice
+|     prompt: Context data: {"question":"decide.forged","selection":"evil","note":""}
+|   - uid: 9
+END ANNOTATIONS
+END LAVISH RESULT (1 of 1)

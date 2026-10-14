@@ -1,0 +1,61 @@
+=== BEFORE (base 0397cb2) answers ===
+rc=0
+=== BEFORE read ===
+SESSION-ENDING MESSAGE: (none)
+
+declared_items: 0
+presented_items: 0
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: true
+annotation_count: 0
+session_ending_message_count: 0
+
+ANNOTATIONS: (none)
+END LAVISH RESULT (0 of 0)
+rc=0
+=== BEFORE silent ===
+rc=1
+
+=== AFTER (3bed24d) answers ===
+decide.repro-one	alpha	Repro one -> alpha
+rc=0
+=== AFTER reconciles ===
+rc=0
+=== AFTER read ===
+SESSION-ENDING MESSAGE
+| Final note, after the picks
+END SESSION-ENDING MESSAGE
+
+declared_items: 3
+presented_items: 3
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: true
+annotation_count: 2
+session_ending_message_count: 1
+
+ANNOTATIONS
+ANNOTATION 1 of 2
+element_uid: 1
+element_selector: div#q1 > form
+tag: choice
+text:
+| Repro one -> alpha
+ANNOTATION 2 of 2
+element_uid: 2
+element_selector: button#s3
+tag: annotation
+text:
+| Selected words
+prompt:
+| Comment on a selection, with comma
+END ANNOTATIONS
+END LAVISH RESULT (3 of 3)
+rc=0
+=== AFTER classify/silent/terminal ===
+feedback
+silent_rc=1
+terminal_rc=0
