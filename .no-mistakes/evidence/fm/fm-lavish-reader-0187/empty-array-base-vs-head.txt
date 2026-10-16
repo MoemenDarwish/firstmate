@@ -1,0 +1,47 @@
+== base
+-- classify
+ended
+rc=0
+-- silent
+rc=1
+-- read
+SESSION-ENDING MESSAGE: (none)
+
+declared_items: 0
+presented_items: 0
+malformed_items: 1
+complete: no
+lifecycle: ended
+session_ended: (unset)
+annotation_count: 0
+captain_message_count: 0
+
+ANNOTATIONS: (none)
+END LAVISH RESULT (0 of 0)
+rc=0
+-- answers
+error: the result is not fully accounted for: declared 0, parsed 0, malformed 1
+rc=3
+== head
+-- classify
+ended
+rc=0
+-- silent
+rc=1
+-- read
+SESSION-ENDING MESSAGE: (none)
+
+declared_items: 0
+presented_items: 0
+malformed_items: 0
+complete: yes
+lifecycle: ended
+session_ended: (unset)
+annotation_count: 0
+captain_message_count: 0
+
+ANNOTATIONS: (none)
+END LAVISH RESULT (0 of 0)
+rc=0
+-- answers
+rc=0

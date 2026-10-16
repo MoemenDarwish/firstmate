@@ -1,0 +1,38 @@
+=== classify
+feedback
+rc=0
+=== read
+SESSION-ENDING MESSAGE
+| Final note
+END SESSION-ENDING MESSAGE
+
+declared_items: 2
+presented_items: 2
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: true
+annotation_count: 1
+session_ending_message_count: 1
+
+ANNOTATIONS
+ANNOTATION 1 of 1
+element_uid: 1
+element_selector: div#q1 > form
+tag: choice
+text:
+| Repro one -> alpha
+END ANNOTATIONS
+END LAVISH RESULT (2 of 2)
+rc=0
+=== answers
+decide.repro-one	alpha	Repro one -> alpha
+rc=0
+=== silent
+rc=1
+=== real empty close
+ended
+classify rc=0
+silent rc=0
+rc=0
+decide.repro-one	alpha	Repro one -> alpha

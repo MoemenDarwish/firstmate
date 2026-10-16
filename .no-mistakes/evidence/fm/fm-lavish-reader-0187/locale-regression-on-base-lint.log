@@ -1,0 +1,2 @@
+not ok - fm-lint.sh multiplied its own processes under LC_ALL=ar_EG.UTF-8 (26 running)
+rc=1

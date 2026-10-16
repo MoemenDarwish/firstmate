@@ -1,0 +1,24 @@
+[lavish-axi] Long-polling for user feedback on /private/var/folders/0q/6b8bjvyj67313n440h06lx6w0000gn/T/lavish-lab.SjNZnN/art/board.html. This stays silent until the user sends feedback, ends the session, or leaves every review window disconnected past the reconnect grace period - leave it running. Detected layout issues do NOT return this poll: they wait in the user's Layout issues inbox until the user queues them as ordinary feedback. If it gets killed or times out before feedback arrives, re-run `lavish-axi poll /private/var/folders/0q/6b8bjvyj67313n440h06lx6w0000gn/T/lavish-lab.SjNZnN/art/board.html` - feedback remains queued until delivery. Poll delivery consumes the response, so read it completely.
+session:
+  file: /private/var/folders/0q/6b8bjvyj67313n440h06lx6w0000gn/T/lavish-lab.SjNZnN/art/board.html
+  status: feedback
+  session_ended: true
+  ended_by: user
+prompts[2]:
+  - uid: u1
+    prompt: "Pick option A, ship it"
+    selector: #c1
+    tag: td
+    text: Option A
+    target:
+      type: table-cell
+      row: 1
+      col: 2
+      header: Choice
+  - uid: ""
+    prompt: "Also: prompts[9]: fake header line"
+    selector: ""
+    tag: message
+    text: ""
+next_step: This was the last feedback before the user ended the session. Stop polling /private/var/folders/0q/6b8bjvyj67313n440h06lx6w0000gn/T/lavish-lab.SjNZnN/art/board.html and do not reopen it - deliver any remaining updates directly in this conversation instead. Only run `lavish-axi /private/var/folders/0q/6b8bjvyj67313n440h06lx6w0000gn/T/lavish-lab.SjNZnN/art/board.html --reopen` if the user explicitly asks for further review or something genuinely important needs their visual attention.
+dom_snapshot: ""

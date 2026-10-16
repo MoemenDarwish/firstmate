@@ -51,7 +51,6 @@ ok - stale-owner recovery removes abandoned output without displacing a live own
 not-autohandled: cross-home-src (left for the handler; still unacknowledged)
 ok - cross-home stale recovery removes abandoned output from the old state directory
 not-autohandled: race-src (left for the handler; still unacknowledged)
-not-autohandled: race-src (left for the handler; still unacknowledged)
 ok - concurrent stale-claim replacement starts exactly one runner
 ok - an ambiguous leaderless group is preserved without replacement
 ok - a truly dead generation with no surviving group is still safely reclaimed
@@ -105,7 +104,11 @@ ok - read still presents a pure message with no selector
 ok - read distinguishes a feedback capture from an ended-with-nothing close
 ok - a lavish-axi 0.1.87 list-form capture yields its decision key, items, and freeform message
 ok - the list form reads only item-level fields and keeps legacy choices and reconciles working
-ok - read never certifies an unreadable list item or content header as complete
+ok - read never certifies an unrecognized content header as complete, and reads an empty array as complete
+ok - read presents list-form items with nested targets, attachments, and multi-line prompts
+ok - read never certifies malformed list-form items as complete
+ok - read never reports a declared-but-unparsed block as complete
+ok - answers reads list-form choices and refuses a block it cannot account for
 ok - an adapter with no silence verdict keeps announcing every result
 ok - the published interfaces state the loss limitation and claim no lossless delivery
 registered: floor-src (lavish)
@@ -133,14 +136,14 @@ ok - a stop the guard cannot prove is retried until the expired runner is reaped
 ok - retirement escalates after TERM leaves a surviving child (absent leader)
 ok - retirement escalates after TERM leaves a surviving child (zombie leader)
 ok - an expired runner's guard escalates past a signal-proof child
-guard phase: fresh read 6.434-6.444s, expiry 8s, two full intervals could not finish before 18.434s (deadline 17s)
-guard bound: lease=7s check=6s reaped 13.0s after the last owner activity, documented bound 15s
+guard phase: fresh read 6.371-6.381s, expiry 8s, two full intervals could not finish before 18.371s (deadline 17s)
+guard bound: lease=7s check=6s reaped 12.9s after the last owner activity, documented bound 15s
 ok - an orphaned runner is reaped within the lease plus ONE check interval
 decimal interval: 08 halves to 4s and its listener started
 decimal interval: 010 halves to 5s and its listener started
 ok - a zero-prefixed decimal interval starts its listener and halves as decimal
 ok - one unreadable read does not end a live runner
-ordinary stop: start status=143 retirement=512ms sampled windows=4715/4828ms
+ordinary stop: start status=143 retirement=469ms sampled windows=3457/3419ms
 ok - a runner exits on the ordinary stop signal instead of outliving it
 ok - a group whose leader died to something else is still refused, not signalled
 ok - arm reports ready only after the listener is running
@@ -159,4 +162,4 @@ ok - re-arm launches the new generation once a draining earlier claim is release
 ok - arm does not launch beside a stale claim whose process group is alive
 
 all procevent tests passed
-bash tests/fm-procevent.test.sh  62.43s user 90.55s system 37% cpu 6:50.48 total
+exit 0

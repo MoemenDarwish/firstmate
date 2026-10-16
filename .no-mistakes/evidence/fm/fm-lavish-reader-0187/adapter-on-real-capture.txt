@@ -1,0 +1,35 @@
+=== classify
+feedback
+rc=0
+=== read
+SESSION-ENDING MESSAGE
+| Also: prompts[9]: fake header line
+END SESSION-ENDING MESSAGE
+
+declared_items: 2
+presented_items: 2
+malformed_items: 0
+complete: yes
+lifecycle: feedback
+session_ended: true
+annotation_count: 1
+session_ending_message_count: 1
+
+ANNOTATIONS
+ANNOTATION 1 of 1
+element_uid: u1
+element_selector: #c1
+tag: td
+text:
+| Option A
+prompt:
+| Pick option A, ship it
+END ANNOTATIONS
+END LAVISH RESULT (2 of 2)
+rc=0
+=== answers
+rc=0
+=== silent
+rc=1
+=== terminal
+rc=0
