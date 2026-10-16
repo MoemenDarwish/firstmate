@@ -1,0 +1,17 @@
+CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=false CLAUDE_CODE_SEND_FEEDBACK=0 claude --dangerously-skip-permissions
+╭─[0m[1m[38;5;2mmoewish@moe-macbook[0m [0m[1m[38;5;4m~/.no-mistakes/worktrees/4d6acb970e7d/01M51HH4VJF3VHZFR2YY04GQDT [0m
+╰─[0m[1m$[0m CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=false CLAUDE_CODE_SEND_FEEDBACK=0 claude --dangerously-skip-permissions
+[0m[38;2;215;119;87m ▐[0m[38;2;215;119;87m[48;2;0;0;0m▛███▛█   [0m[1mClaude Code [0m[38;2;123;135;156mv2.1.301[0m
+[0m[38;2;215;119;87m▝▜[0m[38;2;215;119;87m[48;2;0;0;0m█████[0m[38;2;215;119;87m█▀  [0m[38;2;123;135;156mOpus 5.5 with medium effort · Claude Max[0m
+[0m[38;2;215;119;87m ▝▝   ▝▝   [0m[38;2;123;135;156m~/.no-mistakes/worktrees/4d6acb970e7d/01M51HH4VJF3VHZFR2YY04GQDT[0m
+
+
+[0m[38;2;61;90;128m───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+❯ [0m[38;2;94;179;246m/exit[0m
+[0m[38;2;61;90;128m───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+  [0m[38;2;94;179;246m❯ /[0m[1m[38;2;94;179;246mexit[0m[38;2;94;179;246m                                          [0m[1m[38;2;94;179;246mExit[0m[38;2;94;179;246m the CLI[0m
+  [0m[38;2;123;135;156m  /context                                       Visualize current context usage as a colored grid[0m
+  [0m[38;2;123;135;156m  /usage-credits                                 Configure usage credits or request them from your admin when you[0m
+                                                   [0m[38;2;123;135;156mhit a limit[0m
+  [0m[38;2;123;135;156m  /quiet                                         Enter quiet supervision mode when the captain invokes /quiet or[0m
+                                                   [0m[38;2;123;135;156masks for quiet mode, quiet-while-present, or fewer routine wake t…[0m

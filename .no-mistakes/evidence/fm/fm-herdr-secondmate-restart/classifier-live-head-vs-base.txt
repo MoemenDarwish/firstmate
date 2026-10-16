@@ -1,0 +1,4 @@
+== /Users/moewish/.no-mistakes/worktrees/4d6acb970e7d/01M51HH4VJF3VHZFR2YY04GQDT
+pending/exit
+== /var/folders/0q/6b8bjvyj67313n440h06lx6w0000gn/T/tmp.2uoRyIHRiL
+pending/exit Exit the CLI /context Visualize current context usage as a colored grid /usage-credits Configure usage credits or request them from your admin when you hit a limit /quiet Enter quiet supervision mode when the captain invokes /quiet or asks for quiet mode, quiet-while-present, or fewer routine 

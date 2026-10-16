@@ -1,0 +1,8 @@
+verdict=unknown
+{"error":{"code":"agent_not_found","message":"agent target w1:p1 not found"},"id":"cli:agent:get"}
+
+
+╭─moewish@moe-macbook ~/.no-mistakes/worktrees/4d6acb970e7d/01M51HH4VJF3VHZFR2YY04GQDT ‹3222b3ac›
+╰─$
+╭─moewish@moe-macbook ~/.no-mistakes/worktrees/4d6acb970e7d/01M51HH4VJF3VHZFR2YY04GQDT ‹3222b3ac›
+╰─$

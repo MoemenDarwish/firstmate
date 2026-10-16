@@ -1,0 +1,17 @@
+CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=false CLAUDE_CODE_SEND_FEEDBACK=0 claude --dangerously-skip-permissions
+╭─moewish@moe-macbook ~/.no-mistakes/worktrees/4d6acb970e7d/01M51HH4VJF3VHZFR2YY04GQDT
+╰─$ CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=false CLAUDE_CODE_SEND_FEEDBACK=0 claude --dangerously-skip-permissions
+ ▐▛███▛█   Claude Code v2.1.301
+▝▜██████▀  Opus 5.5 with medium effort · Claude Max
+ ▝▝   ▝▝   ~/.no-mistakes/worktrees/4d6acb970e7d/01M51HH4VJF3VHZFR2YY04GQDT
+
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ /exit
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  ❯ /exit                                          Exit the CLI
+    /context                                       Visualize current context usage as a colored grid
+    /usage-credits                                 Configure usage credits or request them from your admin when you
+                                                   hit a limit
+    /quiet                                         Enter quiet supervision mode when the captain invokes /quiet or
+                                                   asks for quiet mode, quiet-while-present, or fewer routine wake t…
