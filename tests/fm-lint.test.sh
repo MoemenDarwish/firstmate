@@ -571,13 +571,30 @@ test_explicit_path_bypasses_changed_logic() {
   pass "fm-lint.sh explicit paths bypass changed-file mode selection"
 }
 
+# Prints the given pid and every live descendant of it, one per line.
+fm_lint_process_tree() {
+  ps -A -o pid= -o ppid= 2>/dev/null | awk -v root="$1" '
+    { parent[$1] = $2; pids[NR] = $1 }
+    END {
+      keep[root] = 1
+      do {
+        grew = 0
+        for (i = 1; i in pids; i++) {
+          p = pids[i]
+          if (!(p in keep) && (parent[p] in keep)) { keep[p] = 1; grew = 1 }
+        }
+      } while (grew)
+      for (p in keep) print p
+    }'
+}
+
 # A locale whose decimal separator is not "." (the Arabic "٫" is multibyte)
 # changes how bash renders EPOCHREALTIME. The run must finish normally there:
 # a clock that cannot parse it once aborted each private worker into a full
 # owner run that spawned workers of its own until the host ran out of
 # processes, so this run is watched and torn down at a small process bound.
 test_non_dot_decimal_locale_finishes() {
-  local tmp fakebin log out_file pid loc chosen='' count rc=0 target
+  local tmp fakebin log out_file pid loc chosen='' count tree rc=0 target
   for loc in ar_EG.UTF-8 ar_SA.UTF-8 de_DE.UTF-8 fr_FR.UTF-8; do
     case "$(LC_ALL=$loc bash -c 'printf %s "${EPOCHREALTIME:-}"' 2>/dev/null)" in
       *[0-9].[0-9]*|'') ;;
@@ -598,9 +615,10 @@ test_non_dot_decimal_locale_finishes() {
     "$LINT" "$target" > "$out_file" 2>&1 &
   pid=$!
   while kill -0 "$pid" 2>/dev/null; do
-    count=$(pgrep -f "$LINT" 2>/dev/null | wc -l | tr -d ' ')
+    tree=$(fm_lint_process_tree "$pid")
+    count=$(printf '%s\n' "$tree" | grep -c .)
     if [ "${count:-0}" -gt 12 ]; then
-      pkill -KILL -f "$LINT" 2>/dev/null || true
+      printf '%s\n' "$tree" | xargs kill -KILL 2>/dev/null || true
       wait "$pid" 2>/dev/null || true
       fail "fm-lint.sh multiplied its own processes under LC_ALL=$chosen ($count running)"
     fi
