@@ -62,6 +62,7 @@ prompts[3]:
 
 The same board's earlier round, whose prompts all carried only `uid`, `prompt`, `selector`, `tag`, and `text`, came back in the tabular `prompts[4]{uid,prompt,selector,tag,text}:` shape.
 TOON uses the tabular shape only when every object has identical keys and only primitive values, so one prompt carrying a `target` or image `attachments` switches the whole array to the list shape.
+An array with no items is written inline as `prompts: []`, confirmed by encoding one with that bundled TOON 2.3.1 encoder.
 The adapter header owns how both shapes are read, and `tests/fm-procevent.test.sh` replays a sanitized copy of this capture.
 
 ## Why an ended Lavish review is terminal
